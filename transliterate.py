@@ -41,6 +41,43 @@ table['э'] = 'e'
 table['ю'] = 'ju'
 table['я'] = 'ja'
 
+table['А'] = 'a'
+table['Ӑ'] = 'ə'
+table['Б'] = 'b'
+table['В'] = 'ʋ'
+table['Г'] = 'ɡ'
+table['Д'] = 'd'
+table['Е'] = 'ɛ'
+table['Ё'] = 'jo'
+table['Ӗ'] = 'ɘ'
+table['Ж'] = 'ʐ'
+table['З'] = 'z'
+table['И'] = 'i'
+table['Й'] = 'j'
+table['К'] = 'k'
+table['Л'] = 'l'
+table['М'] = 'm'
+table['Н'] = 'n'
+table['О'] = 'o'
+table['П'] = 'p'
+table['Р'] = 'r'
+table['С'] = 's'
+table['Ҫ'] = 'ɕ'
+table['Т'] = 't'
+table['У'] = 'u'
+table['Ӳ'] = 'y'
+table['Ф'] = 'f'
+table['Х'] = 'χ'
+table['Ц'] = 'ts'
+table['Ч'] = 'ʨ'
+table['Ш'] = 'ʂ'
+table['Щ'] = 'ɕː'
+table['Ы'] = 'ɯ'
+table['Ь'] = 'ʲ'
+table['Э'] = 'e'
+table['Ю'] = 'ju'
+table['Я'] = 'ja'
+
 for a in vocab:
 	a = a.strip()
 	if a.count('\t') != 9:
@@ -55,4 +92,6 @@ for a in vocab:
 	line[9] = form
 	
 	print('\t'.join(line))
+
+
 			
