@@ -1,7 +1,7 @@
 import sys
 
 chiw = sys.stdin.readlines()
-
+	
 cases = ['ăн','ĕн','нăн','нĕн','а','е','на','не','ра','ре','та','те','че',
 'ран','рен','тан','тен','чен','па','пе','пала','пеле','сӑр','сӗр','шӑн','шĕн']
 #  1л. -(ă)п/-(ĕ)п/-(ă)м/-(ĕ)м  2л. -ă/ -ĕ 3л. -ĕ 
@@ -20,11 +20,18 @@ adverjectper = ['малла','мелле','лă','лĕ','сен','сессӗн',
 abst = ['лăх', 'лĕх']
 
 for z in chiw:
+
+#remove white space from the beginning and eng of the line
 	line = z.strip()
 	if z.count('\t') != 9:
-		print(z)
-		continue
-	line = z.split('\t')
+		print(line) 
+		continue	
+	
+	#print('lalala',line.replace('\n','ba'))
+	#print ('zazaza',z.replace('\n','ba'))
+	
+	line = z.strip().split('\t')
+	
 	lemma = line[1]
 	# apply stemming rules here to lemma variable
 	
@@ -49,15 +56,14 @@ for z in chiw:
 	
 	if lemma [-3:] in adverjectper:
 		lemma = lemma[:-3]
-		
-			
+				
 	if lemma [-5:] in adverjectper:
 		lemma = lemma[:-5]
 		
 			
 	if lemma [-6:] in adverjectper:
 		lemma = lemma[:-6]
-		
+			
 		# lemma = "тухакан"
 	if lemma [-3:] in time:
 		lemma = lemma[:-3]
@@ -79,4 +85,8 @@ for z in chiw:
 		
 	line[2] = lemma
 	print('\t'.join(line))
+	
+
+
+
 
