@@ -17,7 +17,7 @@ for line in lines:
 		continue
 #split line after tab
 	row = line.split('\t')
-	print(row)
+#	print(row)
 #put tag on 4th row
 	tag = row[3]
 #if there there is no tag, ignore
@@ -47,10 +47,11 @@ for line in lines:
 
 print()
 
+print('#P','\t''count','\t','tag','\t','form')
 
 for tag in count:
     freq = count[tag]/total
-    print(tag, count[tag], freq)
+    print('%.2f\t%d\t%s\t%s' %(freq, count[tag],tag,'_'))
 
 
 for word in words:
