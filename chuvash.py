@@ -30,7 +30,7 @@ verb_past_perf = ['рӑм','рӑн','рӗ','рӑмӑр','рӑр','рӗҫ','рӗ�
 verb_future = ['ӑп','ӑн','ӗ','ӑпӑр','ӑр','ӗҫ']
 
 for z in chiw:
-
+		
 #remove white space from the beginning and eng of the line
 	line = z.strip()
 	if z.count('\t') != 9:
@@ -41,7 +41,10 @@ for z in chiw:
 	#print ('zazaza',z.replace('\n','ba'))
 	
 	line = z.strip().split('\t')
-	
+	if len(line[1]) < 3:
+		print('\t'.join(line))
+		continue
+		
 	lemma = line[1]
 	# apply stemming rules here to lemma variable
 	
